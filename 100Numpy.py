@@ -60,3 +60,44 @@ print(ranvector.mean())
 arr2 = np.ones((5,5),dtype=int)
 arr2[1:-1,1:-1] = 0
 print(arr2)
+
+#### 16. How to add a border (filled with 0's) around an existing array?
+arrrand = np.random.rand(4,4)
+arrrand[1:1,1:1] =0
+print(arrrand)
+
+
+#### 17. What is the result of the following expression? (★☆☆)
+'''python
+0 * np.nan
+np.nan == np.nan
+np.inf > np.nan
+np.nan - np.nan
+np.nan in set([np.nan])
+0.3 == 3 * 0.1
+'''
+
+False
+
+#### 18. Create a 5x5 matrix with values 1,2,3,4 just below the diagonal (★☆☆)
+# k=0 → main diagonal
+#
+# k=-1 → one below the diagonal
+#
+# k=1 → one above the diagonal
+
+mat = np.diag([1, 2, 3, 4], k=-1)
+print(mat)
+
+#### 19. Create a 8x8 matrix and fill it with a checkerboard pattern (★☆☆)
+
+checkerboard  = np.zeros((8,8),dtype=int)
+checkerboard[1::2,::2] =1
+checkerboard[::2,1::2] =1
+print(checkerboard)
+
+#### 20. Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element? (★☆☆)
+
+largestarr = np.zeros((6,7,8),dtype=int)
+index = np.unravel_index(99,largestarr.shape)
+print(index)
