@@ -1,9 +1,9 @@
-# 100 numpy exercises
+# # 100 numpy exercises
 
-#1. Import the numpy package under the name `np` (★☆☆)
+# #1. Import the numpy package under the name `np` (★☆☆)
 
 import numpy as np
-
+#
 #2. Print the numpy version and the configuration (★☆☆)
 print(np.__version__)
 
@@ -39,3 +39,24 @@ print(matrix)
 nonzero1 = np.array([1,2,0,0,4,0])
 indices = np.where(nonzero1 != 0)
 print(indices[0])
+
+#### 11. Create a 3x3 identity matrix (★☆☆)
+iden = np.identity(3)
+print(iden)
+
+#### 12. Create a 3x3x3 array with random values (★☆☆)
+randommat = np.random.rand(3,3,3)
+print(randommat)
+
+#### 13. Create a 10x10 array with random values and find the minimum and maximum values (★☆☆)
+tenvalues = np.random.rand(10,10)
+print(tenvalues,tenvalues.min(),tenvalues.max())
+
+#### 14. Create a random vector of size 30 and find the mean value (★☆☆)
+ranvector = np.random.random(30)
+print(ranvector.mean())
+
+#### 15. Create a 2d array with 1 on the border and 0 inside (★☆☆)
+arr2 = np.ones((5,5),dtype=int)
+arr2[1:-1,1:-1] = 0
+print(arr2)
