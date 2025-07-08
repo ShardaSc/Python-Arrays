@@ -18,3 +18,12 @@ print(arr.nbytes)
 
 #5. How to get the documentation of the numpy add function from the command line? (★☆☆)
 help(np.add)
+
+#### 6. Create a null vector of size 10 but the fifth value which is 1 (★☆☆)
+arr1 = np.zeros(10)
+arr1[4] = 1
+print(arr1)
+
+#### 7. Create a vector with values ranging from 10 to 49 (★☆☆)
+varr = np.arange(10,50)
+print(varr)
