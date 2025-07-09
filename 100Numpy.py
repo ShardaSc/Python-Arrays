@@ -101,3 +101,44 @@ print(checkerboard)
 largestarr = np.zeros((6,7,8),dtype=int)
 index = np.unravel_index(99,largestarr.shape)
 print(index)
+
+#### 21. Create a checkerboard 8x8 matrix using the tile function (★☆☆)
+pattern = np.array([[1,0],[0,1]])
+checkerboard1 = np.tile(pattern,(4,4))
+print(checkerboard1)
+
+#### 22. Normalize a 5x5 random matrix (★☆☆)
+mat = np.random.rand(5,5)
+nor_mat = (mat - np.min(mat)) / (np.max(mat) - np.min(mat))
+print(nor_mat)
+
+#### 23. Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
+
+colors = np.array([
+    [255, 0, 0, 255],   # Red
+    [0, 255, 0, 255],   # Green
+    [0, 0, 255, 255]    # Blue
+],dtype=np.uint8)
+print(colors)
+
+#### 24. Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)
+farray = np.random.rand(5,3)
+sarray = np.random.rand(3,2)
+print(farray @ sarray) # we can also use np.dot(farray, sarray)
+
+#### 25. Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
+negatearray = np.array([1,4,6,7,9,3,8])
+negatearray[(negatearray > 3) & (negatearray < 8)] *=-1
+print (negatearray)
+
+#### 26. What is the output of the following script? (★☆☆)
+'''python
+
+print(sum(range(5),-1))
+from numpy import *
+print(sum(range(5),-1))
+'''
+
+print(sum(range(5),-1))
+from numpy import *
+print(sum(range(5),-1))
