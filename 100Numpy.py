@@ -142,3 +142,27 @@ print(sum(range(5),-1))
 print(sum(range(5),-1))
 from numpy import *
 print(sum(range(5),-1))
+
+
+#### 27. Consider an integer vector Z, which of these expressions are legal? (★☆☆)
+'''python
+Z**Z
+2 << Z >> 2
+Z <- Z
+1j*Z
+Z/1/1
+Z<Z>Z
+'''
+# The legal expressions are:
+# Z**Z
+# 2 << Z >> 2
+# 1j * Z
+# Z / 1 / 1
+
+
+#### 28. What are the result of the following expressions? (★☆☆)
+'''python
+np.array(0) / np.array(0)
+np.array(0) // np.array(0)
+np.array([np.nan]).astype(int).astype(float)
+'''
